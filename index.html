@@ -1,49 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" class="bg-[#F4F7FF]" id="html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevBoard</title>
 
-    <!-- tailwind cdn -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!--daisyui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- google font  -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-      
-        .poppins {
-  font-family: "Poppins", sans-serif;
-}
-        </style>
-        
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-</head>
-<body class="poppins bg-[#F4F7FF]">
-    <section class="max-w-[92%] mx-auto mt-6 ">
-<header>
-    <nav class="flex justify-between items-center bg-white py-3 px-5 rounded-xl">
-        <div class="flex items-center">
-            <img src="assets/logo.png" alt="" class="w-9 mr-2">
+      .poppins {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="poppins">
+    <section class="max-w-[92%] mx-auto mt-6">
+      <header>
+        <nav
+          class="flex justify-between items-center bg-white py-3 px-5 rounded-xl"
+        >
+          <div class="flex items-center">
+            <img src="assets/logo.png" alt="" class="w-9 mr-2" />
             <h2 class="text-xl">Dev<span class="font-bold">Board</span></h2>
-        </div>
-        <div class="flex gap-4 items-center">
+          </div>
+          <div class="flex gap-4 items-center">
             <div class="flex items-center bg-[#F4F7FF] p-3 rounded-[25px]">
-                <img src="assets/checkbox.png" alt="" class="w-7">
-                <h2 class="text-xl font-bold ml-3">23</h2>
+              <img src="assets/checkbox.png" alt="" class="w-7" />
+              <h2 class="text-xl font-bold ml-3">23</h2>
             </div>
-            <div id="theme-change-img" class="bg-[#F4F7FF] p-[.6rem] rounded-full cursor-pointer">
-                <img src="assets/theme-btn.png" alt="" class="w-8" >
+            <div
+              id="theme-change-img"
+              class="bg-[#F4F7FF] p-[.6rem] rounded-full cursor-pointer"
+            >
+              <img src="assets/theme-btn.png" alt="" class="w-8" />
             </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <div class="grid grid-cols-[3fr_1fr] mt-4 gap-4">
+          <div class="bg-white p-4 rounded-2xl">
+            <div class="grid grid-cols-[25%_46%_25%] gap-4 border-b-3 border-gray-300 border-dashed pb-6">
+              <div
+                class="flex justify-center items-center bg-[#F4F7FF] rounded-xl h-[100px] "
+              >
+                <div class="bg-white rounded-full p-4">
+                  <img src="assets/checkbox.png" alt="" class="w-8" />
+                </div>
+                <div class="ml-3">
+                  <p class="text-[#00303C]">Task Assigned</p>
+                  <h1 class="font-bold text-2xl">06</h1>
+                </div>
+              </div>
+              <div id="goToBlog" class="cursor-pointer flex items-center bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] rounded-xl pl-3">
+                <img src="assets/board.png" alt="" class="mr-4" />
+
+                <p class="text-white text-xl">
+                  Discover Something <span class="block">New Today!</span>
+                </p>
+              </div>
+              <div
+                class="flex justify-center items-center bg-[#F4F7FF] rounded-xl"
+              >
+                <div class="bg-white rounded-full p-3">
+                  <img src="assets/calender.png" alt="" class="w-8" />
+                </div>
+                <div class="ml-3">
+                  <p id="day-name" class="text-[#00303C]">Wed,</p>
+                  <h1 id="current-date" class="font-bold text-xl">
+                    Jul 28 2025
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 grid-rows-2"></div>
+          </div>
+
+          <div class="bg-white rounded-xl">
+            <div class="border-b-3 border-gray-300 border-dashed py-5" >
+              <div class="flex items-center justify-center gap-4">
+                <img src="assets/activity.png" alt="" />
+                <h3>Activity Log</h3>
+              </div>
+              <div class="flex justify-center mt-4">
+                <button class="btn btn-primary">Clear History</button>
+              </div>
+            </div>
+            <div id="history-container" class="p-4">
+
+            </div>
+          </div>
         </div>
-    </nav>
-</header>
-
-<main>
-
-</main>
+      </main>
     </section>
 
     <script src="events.js"></script>
-</body>
+  </body>
 </html>
