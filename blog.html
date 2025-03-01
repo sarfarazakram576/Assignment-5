@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" class="bg-[#F4F7FF]">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
-    
+
     <!--daisyui cdn -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -21,22 +21,103 @@
         font-family: "Poppins", sans-serif;
       }
     </style>
-</head>
-<body>
+  </head>
+  <body class="poppins">
     <section class="max-w-[92%] mx-auto mt-6">
-        <header>
-          <nav class="flex justify-between items-center bg-white py-3 px-5 rounded-xl h-[76px]">
-            <div class="flex items-center">
-              <img src="assets/logo.png" alt="" class="w-9 mr-2" />
-              <h2 class="text-xl">Dev<span class="font-bold">Board</span></h2>
-            </div>
-            <div>
-                <button class="btn btn-primary" id="backToDesk">Back to desk</button>
-              </div>
-          </nav>
-        </header>
-        </section> 
+      <header>
+        <nav
+          class="flex justify-between items-center bg-white py-3 px-5 rounded-xl h-[76px]"
+        >
+          <div class="flex items-center">
+            <img src="assets/logo.png" alt="" class="w-9 mr-2" />
+            <h2 class="text-xl">Dev<span class="font-bold">Board</span></h2>
+          </div>
+          <div>
+            <button class="btn btn-primary" id="backToDesk">
+              Back to desk
+            </button>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <h1 class="text-center text-2xl font-bold mt-3 mb-4">Blogs</h1>
 
-        <script src="events2.js"></script>
-</body>
+        <div class="bg-white py-4 rounded-xl mb-4">
+          <h2
+            class="text-[#00303C] font-semibold text-xl pl-4 pb-5 border-b-3 border-gray-300 border-dashed"
+          >
+            Question-1: What are the different ways to select an element in the
+            DOM?
+          </h2>
+          <p class="text-[#8D9294] mt-5 ml-4">
+            There are different ways to select an element in the DOM. You can
+            use getElementById("id") to select by ID,
+            getElementsByClassName("class") to select by class, and
+            getElementsByTagName("tag") to select by tag. You can also use
+            querySelector("selector") to get the first matching element and
+            querySelectorAll("selector") to get all matching elements.
+          </p>
+        </div>
+        <div class="bg-white py-4 rounded-xl mb-4">
+          <h2
+            class="text-[#00303C] font-semibold text-xl pl-4 pb-5 border-b-3 border-gray-300 border-dashed"
+          >
+            Question-2: What is the difference between innerHTML, innerText, and
+            textContent ?
+          </h2>
+          <p class="text-[#8D9294] mt-5 ml-4">
+            innerHTML gets or sets the HTML inside an element, so it includes
+            tags. innerText gets or sets only the visible text, ignoring hidden
+            elements. textContent gets or sets all text, even hidden ones, but
+            it doesn’t process HTML tags.
+          </p>
+        </div>
+        <div class="bg-white py-4 rounded-xl mb-4">
+          <h2
+            class="text-[#00303C] font-semibold text-xl pl-4 pb-5 border-b-3 border-gray-300 border-dashed"
+          >
+            Question-3: What is event delegation in the DOM?
+          </h2>
+          <p class="text-[#8D9294] mt-5 ml-4">
+            Event delegation is a way to handle events using a parent element
+            instead of adding event listeners to multiple child elements. When a
+            child element is clicked, the event "bubbles up" to the parent, and
+            the parent checks which child was clicked. This makes the code
+            easier to manage, especially for dynamic elements.
+          </p>
+        </div>
+        <div class="bg-white py-4 rounded-xl mb-4">
+          <h2
+            class="text-[#00303C] font-semibold text-xl pl-4 pb-5 border-b-3 border-gray-300 border-dashed"
+          >
+            Question-4: What is event bubbling in the DOM?
+          </h2>
+          <p class="text-[#8D9294] mt-5 ml-4">
+            Event bubbling means when an event happens on a child element, it
+            first runs on that element and then moves up to its parent, then the
+            grandparent, and so on. It keeps going up the DOM tree until it
+            reaches the top. This helps in handling events at a higher level
+            instead of adding them to every small element.
+          </p>
+        </div>
+        <div class="bg-white py-4 rounded-xl mb-4">
+          <h2
+            class="text-[#00303C] font-semibold text-xl pl-4 pb-5 border-b-3 border-gray-300 border-dashed"
+          >
+            Question-5: How do you create, add, and remove elements using
+            JavaScript?
+          </h2>
+          <p class="text-[#8D9294] mt-5 ml-4">
+            To create an element in JavaScript, use
+            document.createElement("tag"). To add it, use
+            parent.appendChild(element) or parent.append(element). To remove an
+            element, use element.remove() or parent.removeChild(element). This
+            helps in dynamically changing the webpage content.
+          </p>
+        </div>
+      </main>
+    </section>
+
+    <script src="events2.js"></script>
+  </body>
 </html>
