@@ -48,7 +48,6 @@ for (const button of buttons) {
     button.setAttribute("disabled", true);
 
 const title = button.closest(".p-4").querySelector("h2").innerText;
-console.log(title)
  
 
     const historyContainer = document.getElementById("history-container");
